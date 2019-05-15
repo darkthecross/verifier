@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(
             type: "basic",
             title: "Received message!",
             message: request.sentence,
-            iconUrl: ""
+            iconUrl: "./48.jpeg"
         };
         chrome.notifications.create("info", opt);
         sendResponse({
