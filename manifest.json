@@ -1,0 +1,22 @@
+{
+  "name": "Verifier",
+  "version": "1.0",
+  "description": "A Chrome Extension to help verify truth of statements",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["https://*.google.com/*"],
+    "run_at": "document_idle",
+    "js": [
+      "annyang.min.js",
+      "contentScript.js"
+    ]
+  }],
+  "permissions": [
+    "activeTab", 
+    "notifications"
+  ],
+  "manifest_version": 2
+}
